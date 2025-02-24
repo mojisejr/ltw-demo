@@ -6,8 +6,6 @@ export async function POST(req: NextRequest) {
   const apikey = data.get("apikey")?.toString();
   const file = data.get("file") as Blob;
 
-  console.log("api key: ", apikey);
-
   const openai = new OpenAI({ apiKey: apikey! });
 
   if (!file) {
